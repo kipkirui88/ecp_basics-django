@@ -1,0 +1,49 @@
+<h3>Search by ID Number</h3>
+
+<form action="">
+    <input type="text" placeholder="Enter ID No.">
+    <button type="submit">Search</button>
+</form>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 60%;
+  border: 1px solid rgb(244, 41, 238);
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #addf94}
+</style>
+</head>
+<body>
+
+
+<h2>Customer Details</h2>
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th>#</th>
+      <th> ID NO.</th>
+      <th>Person Name</th>
+      <th>Phone NO.</th>
+    </tr>
+    {% for person in person %}
+    <tr>
+        <td>{{ person.id }}</td>
+        <td>{{ person.id_no }}</td>
+        <td>{{ person.name }}</td>
+        <td>{{ person.phone }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
